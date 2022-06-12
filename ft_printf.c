@@ -16,10 +16,10 @@ int ft_printf_convert(va_list ap, const char str)
         pf_len += ft_putnbr(va_arg(ap, int));
     if (str == 'u')
         pf_len += ft_putnbr_u(va_arg(ap, unsigned int));
-    // if (str == 'x' || str == 'X')
-    //     pf_len += ft_putnbr_hex(va_arg(ap, unsigned int));
-    // if (str == '%')
-    //     pf_len += ft_putchar_percent(va_arg(ap, int));
+    if (str == 'x' || str == 'X')
+        pf_len += ft_putnbr_tohex(va_arg(ap, unsigned int));
+    if (str == '%')
+        pf_len += ft_putchar_percent();
     return (pf_len);
 }
 

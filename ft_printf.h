@@ -19,5 +19,10 @@ int ft_putnbr(int c);
 int ft_ptrlen(unsigned long long c);
 void ft_putptr_ex(unsigned long long n);
 int ft_putptr(unsigned long long c);
+int ft_hexlen(unsigned long long c);
+void ft_putnbr_tohex_sub(unsigned int n);
+int ft_putnbr_tohex(unsigned int n);
+int ft_putchar_percent(void);
+
 
 #endif
