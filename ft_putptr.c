@@ -25,12 +25,12 @@ void ft_putptr_ex(unsigned long long n)
 		ft_putchar_origin('-');
 		ft_putptr_ex(n);
 	}
-	else if (n > 16)
+	else if (n >= 16)
 	{
 		ft_putptr_ex(n / 16);
 		ft_putptr_ex(n % 16);
 	}
-	else if (n >= 0 && n <= 16)
+	else if (n >= 0 && n < 16)
 	{
         if (n >= 10)
             ft_putchar_origin((n - 10) + 'a');

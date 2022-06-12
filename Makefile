@@ -6,6 +6,7 @@ SRCS = ft_printf_utils.c \
 	ft_putnbr_u.c \
 	ft_putptr.c \
 	ft_putnbr_tohex.c \
+	ft_putnbr_tohex_cap.c \
 
 
 OBJS = $(SRCS:.c=.o)

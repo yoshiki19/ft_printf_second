@@ -4,6 +4,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <limits.h>
 
 int ft_putchar(int c);
 int ft_putstr(char *str);
@@ -23,6 +24,7 @@ int ft_hexlen(unsigned long long c);
 void ft_putnbr_tohex_sub(unsigned int n);
 int ft_putnbr_tohex(unsigned int n);
 int ft_putchar_percent(void);
-
+void ft_putnbr_tohex_c(unsigned int n);
+int ft_putnbr_tohex_cap(unsigned int n);
 
 #endif

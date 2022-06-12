@@ -11,8 +11,11 @@ int ft_putstr(char *str)
     int i;
 
     i = 0;
-    // if (!str)
-    //     write(1, "NULL", 4);
+    if (str == NULL)
+    {
+        i = write(1, "(null)", 6);
+        return (i);
+    }
     while (str[i] != '\0')
     {
         write(1, &str[i], 1);

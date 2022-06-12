@@ -16,8 +16,10 @@ int ft_printf_convert(va_list ap, const char str)
         pf_len += ft_putnbr(va_arg(ap, int));
     if (str == 'u')
         pf_len += ft_putnbr_u(va_arg(ap, unsigned int));
-    if (str == 'x' || str == 'X')
+    if (str == 'x')
         pf_len += ft_putnbr_tohex(va_arg(ap, unsigned int));
+    if (str == 'X')
+        pf_len += ft_putnbr_tohex_cap(va_arg(ap, unsigned int));
     if (str == '%')
         pf_len += ft_putchar_percent();
     return (pf_len);
@@ -49,10 +51,17 @@ int ft_printf(const char *str, ...)
 
 // int main(void)
 // {
-//     char s[10] = "aiueo";
-//     char c = 'a';
-//     int i = 0;
+//     // char s[10] = "aiueo";
+//     // char c = 'a';
+//     // int i = 0;
+//     int a = 0;
+//     int b = 0;
 
-//     i = ft_printf("%c%d%s", c, 11, s);
-//     ft_printf("%d", i);
+//     // i = ft_printf("%c%d%s", c, 11, s);
+//     // ft_printf("%d", i);
+//     a = ft_printf(" %d \n", INT_MIN);
+//     b = printf(" %d \n", INT_MIN);
+
+//     printf("%d  %d", a, b);
+//     //printf(" NULL %s NULL ", NULL);
 // }
